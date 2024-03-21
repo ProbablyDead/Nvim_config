@@ -21,6 +21,18 @@ return require('packer').startup(function(use)
 		end
 	})
 
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use('nvim-tree/nvim-web-devicons')
+
+    use('tpope/vim-commentary')
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
