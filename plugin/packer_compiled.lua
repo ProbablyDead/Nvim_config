@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/IlyaVolodin/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cloak.nvim"] = {
+    loaded = true,
+    path = "/Users/IlyaVolodin/.local/share/nvim/site/pack/packer/start/cloak.nvim",
+    url = "https://github.com/laytan/cloak.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/IlyaVolodin/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -103,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/IlyaVolodin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["fidget.nvim"] = {
-    loaded = true,
-    path = "/Users/IlyaVolodin/.local/share/nvim/site/pack/packer/start/fidget.nvim",
-    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
