@@ -25,7 +25,8 @@ require('mason-lspconfig').setup({
       'docker_compose_language_service',
       'golangci_lint_ls',
       'html',
-      'pylsp',
+      'rust_analyzer',
+      'pyright',
 	  'tsserver',
 	  'clangd',
 	  'unocss',
@@ -39,15 +40,11 @@ require('mason-lspconfig').setup({
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
     end,
-    pylsp = function()
-        require'lspconfig'.pylsp.setup{
+    pyright = function()
+        require'lspconfig'.pyright.setup{
             settings = {
-                pylsp = {
-                    plugins = {
-                       pycodestyle = { 
-                           enabled = false
-                       }
-                    }
+                 python = {
+                     pythonPath = vim.fn.exepath("python3.11"),
                 }
             }
         }
