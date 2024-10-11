@@ -13,14 +13,18 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	})
 
-	use({
-		'NLKNguyen/papercolor-theme',
-		as = 'papercolor',
-		config = function() 
-			vim.cmd('set background=light')
-			vim.cmd('colorscheme PaperColor')
-		end
-	})
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+
+    use({
+        'NLKNguyen/papercolor-theme',
+        as = 'papercolor',
+        config = function()
+            vim.defer_fn(function()
+                vim.cmd('set background=light')
+                vim.cmd('colorscheme PaperColor')
+            end, 0)
+        end
+    })
 
     use({
         "iamcco/markdown-preview.nvim",
